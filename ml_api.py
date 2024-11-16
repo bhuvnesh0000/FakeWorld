@@ -7,7 +7,8 @@ from ml_service import generate_privacy_preserving_synthetic_data  # Importing f
 
 app = Flask(__name__)
 
-@app.route('/generate', methods=['POST'])
+#@app.route('/generate', methods=['POST'])
+@app.route('/', methods=['POST'])
 def generate_synthetic_data():
     if 'file' not in request.files:
         return jsonify({"error": "No file provided"}), 400
